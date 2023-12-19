@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class OneGramChat {
-    static User[] users;
+    private User[] users;
 
     public OneGramChat(User[] users) {
         this.users = users;
@@ -29,17 +29,16 @@ public class OneGramChat {
         System.out.println("Введите Пароль");
         String inputPassword = in.nextLine();
         for (User element : users) {
-            try {
-                if (element.equals(null) && element.equals(null)) {
-                    throw new Exception("Пользователя не существует");
-                } else {
-                    System.out.println("Вы вошли");
-                }
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }break;
+            if (element.equals(null) && element.equals(null)) {
+                System.out.println("Пользователя не существует");
+            } else {
+                System.out.println("Вы вошли");
+            }
+            break;
         }
+
     }
+
 
     public void ExitUser() {
 
@@ -51,6 +50,13 @@ public class OneGramChat {
 
     public void ReadMessage() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "OneGramChat{" +
+                "users=" + Arrays.toString(users) +
+                '}';
     }
 }
 

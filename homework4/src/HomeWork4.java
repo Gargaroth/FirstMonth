@@ -120,22 +120,28 @@ public class HomeWork4 {
 
                 case "Новый":
                     oneGramChat.NewUser();
+                    continue;
 
                 case "Войти":
                     oneGramChat.InputUser();
+                    continue;
 
                 case "Выйти":
                     oneGramChat.ExitUser();
+                    continue;
 
                 case "Написать":
                     oneGramChat.SendMessage();
+                    continue;
 
                 case "Прочитать":
                     oneGramChat.ReadMessage();
+                    continue;
 
                 case "Exit":
                     break;
-            }break;
+            }
+            break;
         }
     }
 }
